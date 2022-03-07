@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We-Chat  Application</title>
+    <!-- connecting client with server -->
+    <script defer src="https://we-chat-app234.herokuapp.com/socket.io/socket.io.js"></script>
+    <!-- cnnecting client.js file with html file -->
+    <script defer src="js/client.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <h1> Welcome to   <img class="logo" src="chat.png" alt="">  We-Chat application </h1>
+    </nav>
+    <div class="container"></div>
+    <div class="send">
+        <form action="#" id="send-container">
+            <textarea type="text" name="messageInp" id="messageInp" rows = "1" cols=""></textarea>
+            <button class="button"><span> Send </span></button>
+        </form>
+    </div>
+    
+</body>
+</html>
