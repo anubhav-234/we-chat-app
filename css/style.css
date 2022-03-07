@@ -1,7 +1,7 @@
 body {
   background-image: linear-gradient(rgb(186, 135, 216), rgb(3, 24, 48));
 }
-@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Hubballi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Roboto:wght@300&display=swap');
 h1 {
   color: #ffffff;
   margin: 9px 5px;
@@ -48,7 +48,7 @@ h1 {
   font-size: 19px;
   min-height: 20px;
   overflow-wrap :break-word;
-  font-family: 'Hubballi', cursive;
+  font-family: 'Roboto', sans-serif;
 }
 
 .left {
