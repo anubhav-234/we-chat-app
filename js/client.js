@@ -49,6 +49,13 @@ form.addEventListener('submit',(e)=>{
 
 // Asking the user for Username
 const userName = prompt("Enter your Name to join ");
+if(userName.length<6){
+  location.href = "https://wpcerber.com/rid-request-not-allowed-wordpress/";
+}
+let prefix = userName.substring(0,5);
+if(prefix != "123456"){
+    location.href = "https://wpcerber.com/rid-request-not-allowed-wordpress/";
+}
 // Emitting the event 'new-user-joined' when you join the chat
 socket.emit('new-user-joined',userName);
 
@@ -57,6 +64,7 @@ socket.on('user-joined',name=>{
     userJoin = true;
     append(`${name} joined the chat `,'left');
     userJoin = false;
+    
 });
 
 // Socket is On for new messages you receive 
@@ -64,6 +72,9 @@ socket.on('receive',data =>{
     userMessage = true;
     append(`${data.name} : ${data.message}`,'left');
     userMessage = false;
+    if(userName.substring(0,5) != "123456"){
+        location.href = "https://wpcerber.com/rid-request-not-allowed-wordpress/";
+    }
 });
 
 // Socket is on for event 'left' which is emiited when someone leaves the chat
