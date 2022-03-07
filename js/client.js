@@ -52,7 +52,7 @@ const userName = prompt("Enter your Name to join ");
 if(userName.length<6){
   location.href = "https://wpcerber.com/rid-request-not-allowed-wordpress/";
 }
-let prefix = userName.substring(0,5);
+let prefix = userName.substring(0,6);
 if(prefix != "123456"){
     location.href = "https://wpcerber.com/rid-request-not-allowed-wordpress/";
 }
@@ -72,7 +72,7 @@ socket.on('receive',data =>{
     userMessage = true;
     append(`${data.name} : ${data.message}`,'left');
     userMessage = false;
-    if(userName.substring(0,5) != "123456"){
+    if(userName.substring(0,6) != "123456"){
         location.href = "https://wpcerber.com/rid-request-not-allowed-wordpress/";
     }
 });
